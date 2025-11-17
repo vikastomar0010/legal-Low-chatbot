@@ -35,29 +35,6 @@ Built as a modular research prototype with future integration planned for **Stre
 
 ---
 
-## 📁 Project Structure
-
-├── data/
-│ ├── raw/ # Raw legal text/case laws
-│ ├── processed/ # Cleaned & preprocessed text
-│
-├── embeddings/
-│ └── faiss_index.bin # Trained FAISS index
-│
-├── src/
-│ ├── preprocessing.py # Text cleaning, normalization
-│ ├── embedder.py # Embedding generation using Sentence-Transformers
-│ ├── build_faiss.py # Building FAISS index
-│ ├── semantic_search.py # Retrieval logic
-│ ├── chatbot.py # Core chatbot pipeline
-│
-├── app/
-│ └── demo.ipynb # Notebook demonstration
-│
-├── README.md
-└── requirements.txt
----
-
 ## 🛠️ Tech Stack
 
 | Component | Technology Used |
@@ -77,4 +54,5 @@ Built as a modular research prototype with future integration planned for **Stre
 ```bash
 git clone https://github.com/your-username/legal-law-chatbot.git
 cd legal-law-chatbot
+
 
