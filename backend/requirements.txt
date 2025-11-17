@@ -1,0 +1,7 @@
+sentence-transformers
+langchain_community
+unstructured
+faiss-cpu
+Together
+torch
+numpy

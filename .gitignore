@@ -1,0 +1,119 @@
+# ============================================
+# ⚖️ Legal Chatbot Project — .gitignore
+# ============================================
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.dll
+
+# --- Virtual Environment ---
+venv/
+.env/
+.venv/
+env/
+ENV/
+env.bak/
+python_env/
+Pipfile.lock
+
+# --- IDE & Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# --- OS Files ---
+.DS_Store
+Thumbs.db
+
+# --- Logs & Checkpoints ---
+*.log
+*.out
+*.err
+*.tmp
+*.ipynb_checkpoints
+wandb/
+lightning_logs/
+checkpoints/
+*.ckpt
+
+# --- Hugging Face / Transformers Cache ---
+~/.cache/
+transformers/
+hf_cache/
+datasets/
+cache_dir/
+*cache.json
+
+# --- Data Artifacts ---
+backend/data/*.npy
+backend/data/*.pt
+backend/data/*.npz
+backend/data/*.csv
+backend/data/*.jsonl
+
+# keep core jsons
+!backend/data/answers_data.json
+!backend/data/legal_advice.json
+
+# --- FAISS Indexes & Embeddings ---
+backend/data/faiss_index/
+backend/data/legal_embeddings.npy
+backend/data/advice_embeddings.npy
+backend/data/legal_chunks.npy
+
+# --- Models ---
+backend/models/fine_tuned_inlegalbert/
+backend/models/bart_summarizer/
+*.bin
+*.safetensors
+*.h5
+*.onnx
+
+# --- API Keys & Secrets ---
+*.key
+*.pem
+*.p12
+*.crt
+*.der
+*.jks
+*.keystore
+*.pfx
+*.cer
+*.csr
+*.crt
+*.kdbx
+**/.env
+**/config.yaml
+**/secrets.json
+
+# --- Jupyter Notebook Checkpoints ---
+*.ipynb_checkpoints/
+
+# --- Temporary Files ---
+tmp/
+temp/
+__temp__/
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+# --- Kaggle Outputs (if any) ---
+/kaggle/working/
+/kaggle/input/
+/kaggle/temp/
+
+# --- Streamlit Cache (when added) ---
+frontend/__pycache__/
+frontend/.streamlit/
+frontend/cache/
+frontend/__pycache__/
+frontend/.pytest_cache/
