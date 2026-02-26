@@ -1,58 +1,144 @@
 # 🏛️ AI-Powered Legal Law Chatbot (Minor Research Project – 2025)
 
-An AI-powered **Legal Law Chatbot** designed to answer queries related to legal concepts, case laws, and statutory information.  
-This project uses **semantic search**, **vector embeddings**, and **FAISS** to deliver accurate and context-aware responses.  
-Built as a modular research prototype with future integration planned for **Streamlit/Gradio**.
+# 🏛️ AI Legal Chatbot – Indian Law Assistant
+
+FastAPI Backend • Streamlit Frontend • RAG • Legal Advice Retrieval • Location-Based Assistance
 
 ---
 
-## 🚀 Project Features
+## 📌 Overview
 
-### 🔍 1. Semantic Search on Legal Documents
-- Uses **Sentence-Transformers** to convert legal texts into dense embeddings.
-- Retrieves the most relevant legal case laws based on query similarity.
+This project is a full-stack AI Legal Chatbot designed to assist users with questions related to Indian law.
 
-### ⚡ 2. FAISS-Based Vector Database
-- FAISS (Facebook AI Similarity Search) used for scalable similarity search.
-- Optimized for large-scale retrieval of Indian legal case laws & statutes.
+It combines:
 
-### 🤖 3. Transformer-Based Natural Language Understanding
-- Uses pre-trained Transformer models for better contextual understanding.
-- Improves accuracy and relevance of chatbot responses.
+- Retrieval-Augmented Generation (RAG)
+- Real lawyer advice retrieval
+- Location-based legal assistance
 
-### 🧩 4. Modular and Scalable Pipeline
-- Data preprocessing module  
-- Embedding generation module  
-- FAISS index builder  
-- Semantic search + ranking module  
-- Chatbot response pipeline  
-
-### 🌐 5. Future Enhancements
-- Deployment using Streamlit or Gradio  
-- Integration of RAG (Retrieval Augmented Generation)  
-- Multi-turn conversational memory  
-- Larger database of case laws  
+The system provides both legal context (statutes, punishments, applicability) and practical guidance (real lawyer advice + nearby legal resources).
 
 ---
 
-## 🛠️ Tech Stack
+## 🏗️ System Architecture
 
-| Component | Technology Used |
-|----------|-----------------|
-| Embeddings | Sentence-Transformers |
-| Vector Store | FAISS |
-| NLP Models | HuggingFace Transformers |
-| Backend | Python |
-| Deployment (future) | Streamlit / Gradio |
-| Storage | Filesystem / optional cloud |
+- FastAPI – Backend APIs
+- Streamlit – Frontend Interface
+- Fine-tuned INLegalBERT – Legal semantic embeddings
+- FAISS – High-speed vector search
+- BART Large – Legal Q&A summarization
+- Mistral-7B (Together API) – Legal explanation generation
 
 ---
 
-## 🔧 Installation Guide
+# 🚀 Key Functionalities
 
-### 1️⃣ Clone the Repository
+---
+
+## 1️⃣ Legal Knowledge Retrieval (RAG)
+
+This module provides structured law-based explanations using IPC, CrPC, HMA, and other statutes.
+
+### How it Works:
+- Retrieves relevant legal text using FAISS
+- Uses Mistral-7B to generate a structured 5-point legal answer
+
+### Capabilities:
+- Identifies correct legal sections
+- Explains punishment & exceptions
+- Describes applicability
+- Generates concise structured summaries
+
+---
+
+## 2️⃣ Legal Advice Retrieval (Real Lawyer Answers)
+
+Retrieves real lawyer-provided answers by matching user queries with summarized legal Q&A data.
+
+### Pipeline:
+- Fine-tuned INLegalBERT embeddings
+- FAISS for fast similarity search
+- CrossEncoder for reranking precision
+
+### Provides:
+- Best matching lawyer advice
+- Advice summary
+- Source URL
+- Similarity score
+- Rerank score
+
+---
+
+## 3️⃣ Location-Based Legal Assistance
+
+When a user provides a city name, the system can help locate:
+
+- Lawyers
+- Legal aid centers
+- Police stations
+- Courts
+
+---
+
+# 📂 Project Structure
+legal_chat_bot/
+│
+├── backend/
+│ ├── main.py
+│ ├── rag_module.py
+│ ├── advice_module.py
+│ ├── models/
+│ │ └── inlegalbert_model.py
+│ ├── data/
+│ │ ├── processed_lawyer_data.json
+│ │ ├── summarized_legal_data.json
+│ │ ├── legal_chunks.npy
+│ │ ├── legal_embeddings.npy
+│ │ ├── question_embeddings.pt
+│ │ └── faiss_index/
+│ ├── scripts/
+│ │ ├── build_legal_chunks.py
+│ │ ├── build_question_embeddings.py
+│ │ ├── build_advice_summaries.py
+│ │ ├── fine_tune_inlegalbert.py
+│ │ └── build_advice_index.py
+│
+├── frontend/
+│ └── app.py
+│
+├── .gitignore
+└── README.md
+
+## Tech Stack
+Python
+FastAPI
+Streamlit
+SentenceTransformers
+INLegalBERT
+BART Large
+FAISS
+CrossEncoder
+Together API
+Mistral-7B
+
+📌 Future Roadmap
+
+Chat history support
+
+Improved nearby legal centers detection
+
+Docker deployment
+
+Hindi / multilingual support
+
+Local LLM integration
+---
+
+# ⚙️ Installation
+
+## 1. Clone the Repository
+
 ```bash
-git clone https://github.com/your-username/legal-law-chatbot.git
-cd legal-law-chatbot
-
+git clone https://github.com/yourusername/legal_chat_bot.git
+cd legal_chat_bot
 
