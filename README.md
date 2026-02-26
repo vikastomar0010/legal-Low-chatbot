@@ -1,7 +1,5 @@
 # 🏛️ AI-Powered Legal Law Chatbot (Minor Research Project – 2025)
 
-# 🏛️ AI Legal Chatbot – Indian Law Assistant
-
 FastAPI Backend • Streamlit Frontend • RAG • Legal Advice Retrieval • Location-Based Assistance
 
 ---
@@ -83,55 +81,52 @@ When a user provides a city name, the system can help locate:
 # 📂 Project Structure
 legal_chat_bot/
 │
-├── backend/
-│ ├── main.py
-│ ├── rag_module.py
-│ ├── advice_module.py
-│ ├── models/
-│ │ └── inlegalbert_model.py
-│ ├── data/
-│ │ ├── processed_lawyer_data.json
-│ │ ├── summarized_legal_data.json
-│ │ ├── legal_chunks.npy
-│ │ ├── legal_embeddings.npy
-│ │ ├── question_embeddings.pt
-│ │ └── faiss_index/
-│ ├── scripts/
-│ │ ├── build_legal_chunks.py
-│ │ ├── build_question_embeddings.py
-│ │ ├── build_advice_summaries.py
-│ │ ├── fine_tune_inlegalbert.py
-│ │ └── build_advice_index.py
-│
-├── frontend/
-│ └── app.py
-│
-├── .gitignore
-└── README.md
+-├── backend/
+-│ ├── main.py
+-│ ├── rag_module.py
+-│ ├── advice_module.py
+-│ ├── models/
+-│ │ └── inlegalbert_model.py
+-│ ├── data/
+-│ │ ├── processed_lawyer_data.json
+-│ │ ├── summarized_legal_data.json
+-│ │ ├── legal_chunks.npy
+-│ │ ├── legal_embeddings.npy
+-│ │ ├── question_embeddings.pt
+-│ │ └── faiss_index/
+-│ ├── scripts/
+-│ │ ├── build_legal_chunks.py
+-│ │ ├── build_question_embeddings.py
+-│ │ ├── build_advice_summaries.py
+-│ │ ├── fine_tune_inlegalbert.py
+-│ │ └── build_advice_index.py
+-│
+-├── frontend/
+-│ └── app.py
+-│
+-├── .gitignore
+-└── README.md
 
 ## Tech Stack
-Python
-FastAPI
-Streamlit
-SentenceTransformers
-INLegalBERT
-BART Large
-FAISS
-CrossEncoder
-Together API
-Mistral-7B
+-Python
+-FastAPI
+-Streamlit
+-SentenceTransformers
+-INLegalBERT
+-BART Large
+-FAISS
+-CrossEncoder
+-Together API
+-Mistral-7B
 
+----
 📌 Future Roadmap
 
-Chat history support
-
-Improved nearby legal centers detection
-
-Docker deployment
-
-Hindi / multilingual support
-
-Local LLM integration
+-Chat history support
+-Improved nearby legal centers detection
+-Docker deployment
+-Hindi / multilingual support
+-Local LLM integration
 ---
 
 # ⚙️ Installation
@@ -141,4 +136,5 @@ Local LLM integration
 ```bash
 git clone https://github.com/yourusername/legal_chat_bot.git
 cd legal_chat_bot
+
 
