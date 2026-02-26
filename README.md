@@ -122,11 +122,11 @@ legal_chat_bot/
 ---
 📌 Future Roadmap
 
--Chat history support
--Improved nearby legal centers detection
--Docker deployment
--Hindi / multilingual support
--Local LLM integration
+- Chat history support
+- Improved nearby legal centers detection
+- Docker deployment
+- Hindi / multilingual support
+- Local LLM integration
 ---
 
 # ⚙️ Installation
@@ -136,6 +136,7 @@ legal_chat_bot/
 ```bash
 git clone https://github.com/yourusername/legal_chat_bot.git
 cd legal_chat_bot
+
 
 
 
